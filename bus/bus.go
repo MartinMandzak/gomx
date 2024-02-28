@@ -41,7 +41,6 @@ func main(){
 
 			bus.passengerCount -= MinInteger(bus.passengerCount, passengersOut);
 			bus.passengerCount = MinInteger(bus.passengerCount + passengersIn, bus.capacity);
-			
 
 			fmt.Printf(
 				"Stop no.%d! Current passenger count: %d/%d ...\n",(i+1), bus.passengerCount,bus.capacity,
