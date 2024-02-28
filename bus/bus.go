@@ -40,9 +40,8 @@ func main(){
 			var passengersIn = rand.Intn(maxChange);
 
 			bus.passengerCount -= MinInteger(bus.passengerCount, passengersOut);
-			if bus.passengerCount + passengersIn <= bus.capacity{
-				bus.passengerCount += passengersIn;
-			}
+			bus.passengerCount = MinInteger(bus.passengerCount + passengersIn, bus.capacity);
+			
 
 			fmt.Printf(
 				"Stop no.%d! Current passenger count: %d/%d ...\n",(i+1), bus.passengerCount,bus.capacity,
