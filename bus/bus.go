@@ -49,7 +49,7 @@ func main(){
 			);
 		}
 		fmt.Printf("End of the ride! %d people are walking home...", bus.passengerCount);
-		fmt.Println("\n#############\n");
+		fmt.Print("\n#############\n");
 	}
 }
 
