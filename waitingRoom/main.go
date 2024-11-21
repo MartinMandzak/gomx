@@ -10,6 +10,18 @@ import (
 	"strings"
 )
 
+func printout(waiting_room []string) int{
+	if len(waiting_room) == 0 {
+		return 1
+	}
+		fmt.Print("| ")
+		for _,el := range(waiting_room){
+			fmt.Print(el+" | ")
+		}
+		fmt.Println()
+		return 0
+}
+
 func main(){
 	var waiting_room = []string{}
 
@@ -30,14 +42,12 @@ func main(){
 			} else {
 				fmt.Println("The waiting room is empty!")
 			}
+			printout(waiting_room)
 		default:
 			waiting_room=append(waiting_room, input)
+			printout(waiting_room)
 		}
 
-		for _,el := range(waiting_room){
-			fmt.Print(el+" ")
-		}
-		fmt.Println()
 	}
 }
 
